@@ -1,2 +1,7 @@
 # Remover
-Removes all temporary files of Windows OS
+Removes all temporary files from the following directories:
+
+* temp
+* %temp%
+* prefetch
+* cache (chrome cache folder)
