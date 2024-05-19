@@ -29,12 +29,9 @@ int main(int argc, char *argv[])
 void remove(QString directoryPath)
 {
     QDir directory(directoryPath);
-
-    // Check if the directory exists
     if (directory.exists()) {
         QFileInfoList fileList = directory.entryInfoList(QDir::AllEntries | QDir::NoDotAndDotDot);
         qDebug()<<"Number of files: "<<fileList.size();
-        // Loop through and remove all files in the directory
         foreach (const QFileInfo &fileInfo, fileList) {
             QFile file(fileInfo.absoluteFilePath());
             try
@@ -63,7 +60,7 @@ QString getCurrentUserName()
 {
     DWORD sessionId = WTSGetActiveConsoleSessionId();
     if (sessionId == 0xFFFFFFFF) {
-        // handle the error
+        // error
         return QString();
     }
 
@@ -80,7 +77,7 @@ QString getCurrentUserName()
     }
     else
     {
-        // handle the error
+        // error
         return QString();
     }
 }
