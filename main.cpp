@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
 
-    // color is the keyword to pass on the system function, 0 - black background, 7 - White Foreground
+    // color is the keyword to pass on the system function, 0 - black background, A - Green Foreground
     system("color 0A");
 
     QString user=getCurrentUserName();
