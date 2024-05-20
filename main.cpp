@@ -182,12 +182,8 @@ void checkUpdate()
             }
             else if(input=='n')
             {
-
+                qDebug()<<"All done.";
             }
-        }
-        else
-        {
-
         }
     });
 }
