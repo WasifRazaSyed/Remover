@@ -113,7 +113,7 @@ void checkUpdate()
     QUrl url_v("https://api.github.com/repos/WasifRazaSyed/Remover/releases/latest");
     QNetworkAccessManager *manager=new QNetworkAccessManager();
     QNetworkRequest request(url_v);
-    request.setRawHeader("Authorization", QString("token %1").arg("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").toUtf8());
+    request.setRawHeader("Authorization", QString("token %1").arg("API_KEY").toUtf8());
     QNetworkReply *reply = manager->get(request);
 
     QObject::connect(reply, &QIODevice::readyRead, [=]()
